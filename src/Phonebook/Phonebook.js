@@ -3,6 +3,7 @@ import FormAddContacts from '../FormAddContacts/FormAddContacts';
 import Contacts from '../Contacts/Contacts';
 import { v4 as uuidv4 } from 'uuid';
 import Filter from '../Filter/Filter';
+import './Phonebook.css'
 
 class Phonebook extends Component {
     state = {
@@ -45,9 +46,10 @@ class Phonebook extends Component {
         );
 
         return (
-            <div>
+            <div className="phonebook">
                 <h1>Phonebook</h1>
                 <FormAddContacts onSubmit={this.formSubmitHandler}/>
+                <h2>Contacts</h2>
                 <Filter change={this.handleFilter} filter={filter} contacts={contacts}/>
                 <Contacts contacts={contacts} showContacts={showContacts} onDeleteContact={this.deleteContact}/>
             </div>
