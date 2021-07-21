@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import FormAddContacts from './FormAddContacts';
-import Contacts from './Contacts';
+import FormAddContacts from '../FormAddContacts/FormAddContacts';
+import Contacts from '../Contacts/Contacts';
 import { v4 as uuidv4 } from 'uuid';
-import Filter from './Filter';
+import Filter from '../Filter/Filter';
 
 class Phonebook extends Component {
     state = {
